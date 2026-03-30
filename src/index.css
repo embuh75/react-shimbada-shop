@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+   themes: light --default;
+ }
+
+@theme {
+  --color-shimbada-main: #fefefe;
+  --color-shimbada-primary: #d9c9ba;
+  --color-shimbada-secondary: #3e3b38;
+}
+
