@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu } from "@boxicons/react";
 import { useState } from "react";
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Product", path: "/" },
-  { name: "Contact", path: "/" },
-];
+import { profile, Links } from "../data/profile";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,18 +15,18 @@ export default function NavBar() {
           className="pl-2 py-3 flex gap-2 items-center group transition-all duration-300 hover:scale-105 active:scale-95"
         >
           <img
-            src="/icon/shimbada.png"
+            src={profile.logo}
             alt="Shimbada logo"
             className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-slate-200 shadow-md object-cover"
           />
           <span className="text-sm md:text-xl font-bold text-shimbada-secondary group-hover:text-shimbada-primary">
-            Shimbada Shop
+            {profile.name}
           </span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 text-lg font-semibold">
-          {navLinks.map((link) => (
+          {Links.map((link) => (
             <Link
               key={link.name}
               to={link.path}
@@ -48,7 +43,7 @@ export default function NavBar() {
           onClick={() => setIsOpen((prev) => !prev)}
           className="flex md:hidden items-center justify-center pr-4 py-3"
         >
-          <Menu className="cursor-pointer transition-all duration-300 active:scale-95 hover:text-primary" />
+          <Menu className="cursor-pointer transition-all duration-300 active:scale-95 active:text-shimbada-primary" />
         </button>
       </nav>
 
@@ -59,7 +54,7 @@ export default function NavBar() {
         }`}
       >
         <div className="flex flex-col items-center">
-          {navLinks.map((link) => (
+          {Links.map((link) => (
             <Link
               key={link.name}
               to={link.path}
