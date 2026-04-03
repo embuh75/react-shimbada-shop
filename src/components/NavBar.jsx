@@ -49,8 +49,8 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden mx-2 mt-2 overflow-hidden rounded-md border border-shimbada-primary/70 bg-main shadow-md transition-all duration-500 ${
-          isOpen ? "max-h-60 opacity-100 py-2" : "max-h-0 opacity-0"
+        className={`absolute z-50 w-full md:hidden overflow-hidden border border-shimbada-primary/70 bg-shimbada-main shadow-md transition-all ease-in duration-500 ${
+          isOpen ? " max-h-fit" : "max-h-0"
         }`}
       >
         <div className="flex flex-col items-center">
