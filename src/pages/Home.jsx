@@ -16,10 +16,10 @@ export default function Home() {
             tersedia dalam satu katalog praktis dan mudah dicari.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <button className="bg-shimbada-main text-shimbada-secondary font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <button className="bg-shimbada-main text-shimbada-secondary font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
               Lihat Produk
             </button>
-            <button className="border-2 border-shimbada-main text-shimbada-main font-semibold px-6 py-3 rounded-xl hover:bg-shimbada-main hover:text-shimbada-secondary transition-all duration-300">
+            <button className="border-2 border-shimbada-main text-shimbada-main font-semibold px-6 py-3 rounded-xl hover:bg-shimbada-main hover:text-shimbada-secondary transition-all duration-300 cursor-pointer">
               Cari Kategori
             </button>
           </div>
